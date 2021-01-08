@@ -1,0 +1,47 @@
+{
+  "name": "practice-riot",
+  "version": "0.0.0",
+  "description": "Practice Riot.js",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --inline --watch --hot --colors -d --port 3000",
+    "build": "webpack -c --mode production",
+    "test": "nyc --require esm --require jsdom-global/register --require @riotjs/register mocha src/**/*.spec.js",
+    "cov-html": "nyc report --reporter=html"
+  },
+  "author": "Neo <neos21@gmail.com> (https://neos21.net/)",
+  "license": "MIT",
+  "homepage": "https://github.com/Neos21/practice-riot#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Neos21/practice-riot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Neos21/practice-riot/issues"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/Neos21"
+  },
+  "dependencies": {
+    "@riotjs/hot-reload": "5.0.0",
+    "@riotjs/lazy": "1.1.0",
+    "@riotjs/route": "7.0.0",
+    "riot": "5.1.2"
+  },
+  "devDependencies": {
+    "@riotjs/compiler": "5.1.3",
+    "@riotjs/register": "5.0.0",
+    "@riotjs/webpack-loader": "5.0.0",
+    "chai": "4.2.0",
+    "esm": "3.2.25",
+    "jsdom": "16.4.0",
+    "jsdom-global": "3.0.2",
+    "mocha": "8.2.1",
+    "nyc": "15.1.0",
+    "webpack": "4.44.2",
+    "webpack-cli": "3.3.12",
+    "webpack-dev-server": "3.11.1"
+  }
+}

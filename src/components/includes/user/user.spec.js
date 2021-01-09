@@ -1,6 +1,7 @@
-import User from './user.riot';
-import { expect } from 'chai';
 import { component } from 'riot';
+import { expect } from 'chai';
+
+import User from './user.riot';
 
 describe('User Unit Test', () => {
   const mountUser = component(User);

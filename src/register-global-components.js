@@ -1,5 +1,6 @@
-import { register } from 'riot';
 import { basename } from 'path';
+
+import { register } from 'riot';
 
 const globalComponentsContext = require.context('./components/global/', true, (/[a-zA-Z0-9-]+\.riot/));
 

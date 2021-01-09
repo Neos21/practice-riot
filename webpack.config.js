@@ -1,6 +1,5 @@
 
 const path = require('path');
-//const webpack = require('webpack');
 
 module.exports = {
   entry: {
@@ -8,7 +7,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/dist/',
+    publicPath: './',  // 相対パスで動くようにする
     filename: 'bundle.js',
     chunkFilename: 'chunks/[name]/index.[chunkhash].js',
     devtoolModuleFilenameTemplate: 'source-webpack:///[resourcePath]',

@@ -1,6 +1,7 @@
-import Sidebar from './sidebar.riot';
-import { expect } from 'chai';
 import { component } from 'riot';
+import { expect } from 'chai';
+
+import Sidebar from './sidebar.riot';
 
 describe('Sidebar Unit Test', () => {
   const mountSidebar = component(Sidebar);

@@ -2,22 +2,18 @@
 
 Practice Riot.js
 
+__[Enter Demo Site](https://neos21.github.io/practice-riot/)__
 
-## Start
+## Start Dev Server
 
 ```bash
 $ npm start
 ```
 
 
-## Test
-
-```bash
-$ npm test
-```
-
-
 ## Build
+
+- Customize `src/basepath.js` and  `404.html` for deploying to GitHub Pages
 
 ```bash
 $ npm run build

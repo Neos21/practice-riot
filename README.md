@@ -13,7 +13,8 @@ $ npm start
 
 ## Build
 
-- Customize `src/basepath.js` and  `404.html` for deploying to GitHub Pages
+- Workaround : To include `dist/` directory, Don't add `dist/` to `.gitignore` file.
+- Customize `src/basepath.js` and  `404.html` for deploying to GitHub Pages.
 
 ```bash
 $ npm run build

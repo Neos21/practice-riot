@@ -7,7 +7,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    publicPath: './',  // 相対パスで動くようにする
+    publicPath: '/dist/',  // TODO : '/dist/' ではなく '' (relative to HTML page) でいいか？本番ビルド時にパスを直すモノ https://webpack.js.org/configuration/output/#outputpublicpath https://qiita.com/chuck0523/items/caacbf4137642cb175ec
     filename: 'bundle.js',
     chunkFilename: 'chunks/[name]/index.[chunkhash].js',
     devtoolModuleFilenameTemplate: 'source-webpack:///[resourcePath]',

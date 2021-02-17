@@ -32,26 +32,32 @@
   </div>
   
   <script>
-    import { Router, Route, route, toRegexp, match } from '@riotjs/route';
+    import { Router, Route, route, toRegexp, match, setBase } from '@riotjs/route';
     import lazy from '@riotjs/lazy';
     
     import Loader from './components/includes/loader/loader.riot';
     import NotFound from './pages/not-found.riot';
     import pages from './pages';
     
+    import Home from './pages/home.riot';
+    import About from './pages/about.riot';
+    // setBase('#');
+    
     export default {
       components: {
         Router,
         Route,
         NotFound,
-        Home: lazy(Loader, () => import(
-          /* webpackPrefetch: true, webpackChunkName: 'pages/home' */
-          './pages/home.riot'
-        )),
-        About: lazy(Loader, () => import(
-          /* webpackPrefetch: true, webpackChunkName: 'pages/about' */
-          './pages/about.riot'
-        )),
+        Home,
+        About
+        //Home: lazy(Loader, () => import(
+        //  /* webpackPrefetch: true, webpackChunkName: 'pages/home' */
+        //  './pages/home.riot'
+        //)),
+        //About: lazy(Loader, () => import(
+        //  /* webpackPrefetch: true, webpackChunkName: 'pages/about' */
+        //  './pages/about.riot'
+        //)),
       },
       state: {
         pages,
@@ -66,6 +72,8 @@
       onAnyRoute(path) {
         // show the not found page if none of the page paths are matched
         const activePage = pages.find(p => match(path.pathname, toRegexp(p.path)));
+        // TODO
+        //const activePage = pages.find(p => match(path.hash, toRegexp(p.path)));
         this.update({
           activePage,
           showNotFound: !activePage

@@ -33,25 +33,20 @@
   
   <script>
     import { Router, Route, route, toRegexp, match } from '@riotjs/route';
-    import lazy from '@riotjs/lazy';
     
-    import Loader from './components/includes/loader/loader.riot';
     import NotFound from './pages/not-found.riot';
     import pages from './pages';
-
+    
+    import Home from './pages/home.riot';
+    import About from './pages/about.riot';
+    
     export default {
       components: {
         Router,
         Route,
         NotFound,
-        Home: lazy(Loader, () => import(
-          /* webpackPrefetch: true, webpackChunkName: 'pages/home' */
-          './pages/home.riot'
-        )),
-        About: lazy(Loader, () => import(
-          /* webpackPrefetch: true, webpackChunkName: 'pages/about' */
-          './pages/about.riot'
-        )),
+        Home,
+        About
       },
       state: {
         pages,

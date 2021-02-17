@@ -1,4 +1,19 @@
 <home>
-  <h1>I am the home page</h1>
+  <h1>Practice Riot.js</h1>
   <p>Welcome</p>
+  <ul>
+    <li><a href={state.basepath + '/'}>Home</a></li>
+    <li><a href={state.basepath + '/about'}>About</a></li>
+    <li><a href={state.basepath + '/does-not-exist'}>Wrong Path (Go To 'Not Found' Page)</a></li>
+  </ul>
+  
+  <script>
+    import basepath from '../basepath';
+    
+    export default {
+      state: {
+        basepath: basepath
+      }
+    }
+  </script>
 </home>
